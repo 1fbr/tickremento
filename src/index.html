@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+    <title>Tickremento | Inicio</title>
+    <meta name="description" content="">
+    <script src="./js/index.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div id="logo">
+            <img src="../img/logo.webp" alt="Web logo">
+            <h1 id="title">Tickremento</h1>
+        </div>
+    </header>
+    <hr class="separator">
+    <nav>
+        <div class="navbar">
+            <a href="./index.html" id="home">Inicio</a>
+            <span class="dot">•</span>
+            <a href="./views/about.html" id="about">Acerca</a>
+            <span class="dot">•</span>
+            <a href="./views/faq.html" id="faq">FAQ</a>
+            <span class="dot">•</span>
+            <a href="mailto:tickremento@proton.me" id="contact">Contacto</a>
+        </div>
+    </nav>
+    <hr class="separator">
+    <main id="home-content">
+        <div id="disclaimer"> 
+            <h2 id="warning">AVISO</h2>
+            <p>Esta página es una demostración de un proyecto personal, publicada con recursos gratuitos, y por lo tanto, limitados. Es posible que experimentes tiempos de carga altos o un rendimiento bajo. Siento las molestias.</p>
+        </div>
+        <section class="filters">
+            <select id="order-by" title="Ordenar">
+                <option value="1">Orden: A-Z</option>
+                <option value="-1">Orden: Z-A</option>
+            </select>
+            <div class="checkboxes">
+                <span class="supermarket">Mercadona</span>
+                <label class="switch" title="Mercadona">
+                    <input type="checkbox" id="Mercadona">
+                    <span class="slider round"></span>
+                </label>
+                <span class="supermarket">Gadis</span>
+                <label class="switch" title="Gadis">
+                    <input type="checkbox" id="Gadis">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <input type="search" class="product-filter" placeholder="Buscar un producto..." value="">
+        </section>
+        <div class="main-container"></div>
+        <div class="spinner"></div>
+    </main>
+    <footer id="after-content">
+        <section id="footer-content">
+            <div id="terms">
+                <p>El contenido mostrado en esta página es acrítico, no se pretende señalar a niguna entidad, solo mostrar de manera transparente la situación actual.</p>
+                <p>Los derechos de autor de las imágenes pertenecen a sus legítimos dueños, se indexan en la web desde su origen, en ningún momento se intenta apropiar de las mismas.</p>
+            </div>
+            <div id="privacy">
+                <p>Esta página no contiene cookies ni registra ningún tipo de información sobre el usuario.</p>
+                <p>Página diseñada a modo de muestra sobre el crecimiento de los precios. Todos los derechos reservados. 2022 &copy;.</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
