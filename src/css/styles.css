@@ -154,15 +154,6 @@ footer#after-content {
     margin: 1rem;
 }
 
-.separator {
-    width: 100%;
-    color: #fff;
-}
-
-#delimiter {
-    margin-bottom: 1rem;
-}
-
 .header {
     display: flex;
     flex-direction: row;
@@ -233,17 +224,12 @@ nav {
     margin: 1rem;
 }
 
-hr {
-    width: 50vw;
-    margin: auto;
-}
-
 .accordion {
   max-width: 30vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   overflow: hidden;
-  background: #d2849a;
+  background: #102b6e;
   margin: 1.5rem auto;
 }
 
