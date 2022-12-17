@@ -16,6 +16,11 @@ main#home-content {
     background-color: #fff;
 }
 
+.separator {
+    width: 100%;
+    color: #fff;
+}
+
 .products-container {
     display: flex;
     flex-direction: row;
