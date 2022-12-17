@@ -193,14 +193,15 @@ nav {
 
 .navbar a:hover {
     cursor: pointer;
+    opacity: 0.7;
 }
 
-.navbar a:visited, #contact, a#home:visited {
+.navbar a:visited, .navbar a:link, #contact, a#home:visited {
     color: inherit;
 }
 
 .navbar a:active {
-    color: gray;
+    color: inherit;
     font-weight: bold;
 }
 
@@ -224,13 +225,24 @@ nav {
     margin: 1rem;
 }
 
+#faq-heading {
+    text-align: center;
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+#faq-caption {
+	text-align: center;
+	padding: 0.5rem;
+	line-height: 1.5rem;
+}
+
 .accordion {
-  max-width: 30vw;
+  max-width: 40vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   overflow: hidden;
   background: #102b6e;
-  margin: 1.5rem auto;
+  margin: 2rem auto 2.5rem auto;
 }
 
 .accordion-label, .accordion-content {
@@ -280,13 +292,6 @@ nav {
 
 .accordion-input:checked ~ .accordion-label::after {
   transform: translateY(-50%) rotate(0.5turn);
-}
-
-img#faq {
-    margin: 1rem auto;
-    display: block;
-    width: 200px;
-    height: 150px;
 }
 
 .supermarket {
@@ -422,6 +427,11 @@ input:checked + .slider:before {
 
     #footer-content {
         font-size: 0.9rem;
+    }
+
+    #terms, #privacy {
+        line-height: 1.5rem;
+        font-size: 0.85rem;
     }
 }
 
