@@ -19,8 +19,8 @@ modalCloseButton.addEventListener('click', () => {
 const modalContent = document.createElement('p')
 modalContent.classList.add('modal-content')
 
-export const createModal = (message) => {
-  modalHeader.innerText = 'Ocurrió un error'
+export const createModal = (header, message) => {
+  modalHeader.innerText = header
   modalContent.innerText = message
   modalWindow.appendChild(modalHeader)
   modalWindow.appendChild(modalContent)
