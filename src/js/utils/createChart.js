@@ -14,18 +14,14 @@ export const chartConfig = (monthsArray, pricesArray, priceChart) => {
     data: dataChart,
     options: {
       plugins: {
-        title: {
-          display: true,
-          text: 'Análisis Precio(€)'
-        },
         legend: {
           display: false
         },
         y: {
           suggestedMin: 0,
-          suggestedMax: 5,
+          suggestedMax: 7.5,
           ticks: {
-            stepSize: 0.5
+            stepSize: 1.5
           }
         }
       }

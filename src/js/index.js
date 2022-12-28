@@ -1,25 +1,18 @@
 import { getProducts, getAllProducts, getSupermarket } from './components/getProducts.js'
+import { limit, maxPages, gadisPages, mercadonaPages } from './utils/pageNumber.js'
 
 const footer = document.querySelector('footer')
 const search = document.querySelector('.product-filter')
-const selectOrder = document.querySelector('#order-by')
 const supermarkets = document.querySelectorAll("input[type='checkbox']")
 const gadis = document.querySelector('#Gadis')
 const mercadona = document.querySelector('#Mercadona')
 const mainContainer = document.querySelector('.main-container')
 const spinner = document.querySelector('.spinner')
+const cleanSearch = document.querySelector('.clean-search')
 
 let actualPage = 1
-let order = 1
-let supermarket = ''
+const order = 1
 let searchTerm = ''
-const limit = 60
-const TOTAL_PRODUCTS = 474
-const GADIS_PRODUCTS = 350
-const MERCADONA_PRODUCTS = 124
-const defaultPages = Math.ceil(TOTAL_PRODUCTS / limit)
-const gadisPages = Math.ceil(GADIS_PRODUCTS / limit)
-const mercadonaPages = Math.ceil(MERCADONA_PRODUCTS / limit)
 
 const removeChilds = (parent) => {
   while (parent.lastChild) {
@@ -55,45 +48,44 @@ search.addEventListener('input', debounce((e) => {
   gadis.checked = false
   mercadona.checked = false
   if (e.target.value.length >= 2) {
+    cleanSearch.disabled = false
     getAllProducts(searchTerm)
+    spinner.style.display = 'none'
+    footer.style.visibility = 'visible'
   }
   if (e.target.value.length === 0) {
+    cleanSearch.disabled = true
     actualPage = 1
     getProducts(actualPage, limit, order)
   }
 }, 250))
 
-const handleOrderChange = (e) => {
-  order = selectOrder.value
+cleanSearch.addEventListener('click', () => {
+  removeChilds(mainContainer)
+  cleanSearch.disabled = true
   search.value = ''
   spinner.style.display = 'block'
-  removeChilds(mainContainer)
   actualPage = 1
-
-  if (gadis.checked === true || mercadona.checked === true) {
-    getSupermarket(supermarket, actualPage, limit, order)
-  } else {
-    getProducts(actualPage, limit, order)
-  }
-}
-
-selectOrder.addEventListener('change', handleOrderChange)
+  getProducts(actualPage, limit, order)
+})
 
 const handleSupermarketChange = (e) => {
   e.preventDefault()
-  supermarket = e.target.id
   spinner.style.display = 'block'
   search.value = ''
   actualPage = 1
   removeChilds(mainContainer)
 
-  if (gadis.checked === true && mercadona.checked === false) {
-    getSupermarket('Gadis', actualPage, limit, order)
-  } else if (mercadona.checked === true && gadis.checked === false) {
-    getSupermarket('Mercadona', actualPage, limit, order)
-  } else if (gadis.checked === true && mercadona.checked === true) {
-    getProducts(actualPage, limit, order)
-  } else if (gadis.checked === false && mercadona.checked === false) {
+  let supermarketName = null
+  if (gadis.checked && !mercadona.checked) {
+    supermarketName = 'Gadis'
+  } else if (!gadis.checked && mercadona.checked) {
+    supermarketName = 'Mercadona'
+  }
+
+  if (supermarketName) {
+    getSupermarket(supermarketName, actualPage, limit, order)
+  } else {
     getProducts(actualPage, limit, order)
   }
 }
@@ -108,36 +100,32 @@ window.addEventListener('scroll', (scrollEvent) => {
     if (scrollTop + window.innerHeight >= scrollHeight) {
       setTimeout(newPage, 150)
     }
-  } else {
-    spinner.style.display = 'none'
   }
 })
 
 const newPage = () => {
   actualPage++
-  if (gadis.checked && mercadona.checked) {
-    if (actualPage <= defaultPages) {
-      getProducts(actualPage, limit, order)
-    } else {
-      spinner.style.display = 'none'
-    }
-  } else if (gadis.checked) {
-    if (actualPage <= gadisPages) {
-      getSupermarket('Gadis', actualPage, limit, order)
-    } else {
-      spinner.style.display = 'none'
-    }
+  let supermarket = null
+  if (gadis.checked) {
+    supermarket = 'Gadis'
   } else if (mercadona.checked) {
-    if (actualPage <= mercadonaPages) {
-      getSupermarket('Mercadona', actualPage, limit, order)
-    } else {
+    supermarket = 'Mercadona'
+  }
+
+  if (supermarket) {
+    if (supermarket === 'Gadis' && actualPage > gadisPages) {
       spinner.style.display = 'none'
+      return
+    } else if (supermarket === 'Mercadona' && actualPage > mercadonaPages) {
+      spinner.style.display = 'none'
+      return
     }
+    getSupermarket(supermarket, actualPage, limit, order)
   } else {
-    if (actualPage <= defaultPages) {
-      getProducts(actualPage, limit, order)
-    } else {
+    if (actualPage > maxPages) {
       spinner.style.display = 'none'
+      return
     }
+    getProducts(actualPage, limit, order)
   }
 }
