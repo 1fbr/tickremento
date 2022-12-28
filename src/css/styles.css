@@ -9,6 +9,7 @@
 
 main {
     width: 100%;
+    background-color: whitesmoke;
 }
 
 main#home-content {
@@ -16,102 +17,15 @@ main#home-content {
     background-color: #fff;
 }
 
-.separator {
-    width: 100%;
-    color: #fff;
-}
-
-.products-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-.new-mercadona-card:hover, .new-gadis-card:hover, .product-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.new-mercadona-card, .new-gadis-card, .product-card, #disclaimer, .modal-window {
-    width: 400px;
-    text-align: center;
-    margin: 15px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.43);
-    background-color: #fff;
-}
-
-.product-info, .filters, .checkboxes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.filters {
-    padding: 1rem;    
-}
-
-select {
-    margin: 0 0.5rem;
-    background-color: #FCFCFD;
-    border-radius: 4px;
-    border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #36395A;
-    cursor: pointer;
-    height: 35px;
-    justify-content: center;
-    transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow,transform;
-    font-size: 15px;
-}
-
-.price-info {
-    padding: 0.25rem 0 0.25rem 0;
-}
-
-.inner-info {
-    display: flex;
-    flex-direction: column;
-}
-
 a {
-    padding-left: 0.5rem;
     font-weight: bold;
 }
 
 img {
     width: 85px;
     height: 85px;
+    border-radius: 0.25rem;
 }
-
-span#product-name, span#actual-price {
-    font-size: 0.9rem;
-}
-
-span#supermarket-name {
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-span#increment {
-    padding-left: 15px;
-    font-size: 0.75rem;
-}
-
 
 footer {
     width: 100%;
@@ -130,18 +44,9 @@ footer#after-content {
     line-height: 2rem;
 }
 
-#disclaimer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40vw;
-    margin: 1.5rem auto;
-    padding: 1rem;
-}
-
 #footer-content {
     padding: 1.5rem;
+    width: 70%;
 }
 
 #logo {
@@ -175,9 +80,12 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0.3rem;
     background-color: #102b6e;
     color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .dot {
@@ -193,7 +101,8 @@ nav {
 }
 
 .navbar a {
-    text-decoration: underline;
+    text-decoration: none;
+    margin-left: 0.35rem;
 }
 
 .navbar a:hover {
@@ -206,254 +115,12 @@ nav {
 }
 
 .navbar a:active {
-    color: inherit;
+    color: gray;
     font-weight: bold;
 }
 
-.product-filter {
-    margin: 1rem;
-	width: 250px;
-	padding: .375rem .75rem;
-	font-size: 1rem;
-	border: 1px solid #ced4da;
-	border-radius: .25rem;
-}
-
-#about-container {
+.route {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.headers, .text {
-    margin: 1rem;
-}
-
-#faq-heading {
-    text-align: center;
-    padding: 1.5rem 0 0.5rem 0;
-}
-
-#faq-caption {
-	text-align: center;
-	padding: 0.5rem;
-	line-height: 1.5rem;
-}
-
-.accordion {
-  max-width: 40vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: #102b6e;
-  margin: 2rem auto 2.5rem auto;
-}
-
-.accordion-label, .accordion-content {
-  padding: 0.8rem 1.3rem;
-}
-
-.accordion-label {
-  display: block;
-  color: #ffffff;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.1s;
-}
-
-.accordion-label:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.accordion-label::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  width: 12px;
-  height: 6px;
-  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
-  background-size: contain;
-  transition: transform 0.4s;
-}
-
-.accordion-content {
-  background: #ffffff;
-  line-height: 1.6;
-  font-size: 0.85em;
-  display: none;
-}
-
-.accordion-input {
-  display: none;
-}
-
-.accordion-input:checked ~ .accordion-content {
-  display: block;
-}
-
-.accordion-input:checked ~ .accordion-label::after {
-  transform: translateY(-50%) rotate(0.5turn);
-}
-
-.supermarket {
-    padding: 1rem;
-}
-
-.modal-window {
-    padding: 2em 3em;
-    text-align: center;
-    border-radius: .5em;
-    width: 30vw;
-    margin: 2.5rem auto;
-}
-
-.modal-header {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: .5em;
-}
-
-.modal-content {
-    margin-bottom: 2em;
-    color: #666;
-}
-
-.modal-close-button {
-    font-size: 1.25em;
-    font-weight: bold;
-    background-color: #000;
-    border: none;
-    padding: .5em 1em;
-    color: #fff;
-    box-shadow: 0 0 0 2px #000 inset;
-    border-radius: .25em;
-    cursor: pointer;
-    transition: background .4s ease, color .4s ease;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-  
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-  
-.slider.round {
-    border-radius: 34px;
-}
-  
-.slider.round:before {
-    border-radius: 50%;
-}
-
-.spinner {
-    margin: 30px auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    animation: spin 1.0s linear infinite;
-    border-bottom-color: #614ad3;
-}
-
-@keyframes spin {
-    from {transform: rotate(0);}
-    to {transform: rotate(360deg);}
-}
-
-@media (min-width: 320px) and (max-width: 710px) {
-    select {
-        display: none;
-    }
-
-    #disclaimer, .modal-window, .product-filter  {
-        width: 85vw;
-    }
-
-    .accordion {
-        max-width: 85vw;
-    }
-
-    .filters {
-        flex-direction: column;
-    }
-
-    .navbar {
-        flex-direction: column;
-    }
-
-    #footer-content {
-        font-size: 0.9rem;
-    }
-
-    #terms, #privacy {
-        line-height: 1.5rem;
-        font-size: 0.85rem;
-    }
-}
-
-@media (min-width: 710px) and (max-width: 878px) {
-    .accordion {
-        max-width: 80vw;
-    }
-
-    .modal-window {
-        width: 60vw;
-    }
-
-    #disclaimer {
-        width: 80vw;
-    }
-
-    .new-gadis-card, .new-mercadona-card {
-        width: 360px;
-    } 
-}

@@ -1,0 +1,233 @@
+.products-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.new-mercadona-card:hover, .new-gadis-card:hover, .product-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.new-mercadona-card, .new-gadis-card, .product-card, .modal-window {
+    width: 400px;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    /* border: 1px solid rgba(255, 255, 255, 0.43) */;
+    background-color: #fff;
+}
+
+.new-mercadona-card {
+    border: 2px solid rgba(20, 216, 20, 0.6);
+}
+
+.new-gadis-card {
+    border: 2px solid rgba(234, 214, 51, 0.6);
+}
+
+.product-info, .filters, .checkboxes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.filters {
+    padding: 1rem 0 0.5rem 0;  
+    position: -webkit-sticky;
+    position: sticky;
+    top: 58px;
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.clean-search {
+    display: flex;
+    align-items: center;
+    width: 5.5rem;
+    height: 35px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.clean-search:disabled {
+    cursor: not-allowed;
+}
+
+#clean-button {
+    margin-left: 0.15rem;
+}
+
+.price-info {
+    padding: 0.25rem 0 0.25rem 0;
+}
+
+.inner-info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: baseline;
+    text-align: initial;
+}
+
+a {
+    font-weight: bold;
+}
+
+.product-info a {
+    width: 30%
+}
+
+img {
+    width: 85px;
+    height: 85px;
+    border-radius: 0.25rem;
+}
+
+span#product-name {
+    font-size: 0.9rem;
+}
+
+span#supermarket-name, span#actual-price {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+span#increment {
+    padding-left: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.product-filter {
+    margin: 0 1rem;
+	width: 250px;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+}
+
+.supermarket {
+    padding: 1rem;
+}
+
+.modal-window {
+    padding: 2em 3em;
+    text-align: center;
+    border-radius: .5em;
+    width: 30vw;
+    margin: 2.5rem auto;
+}
+
+.modal-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.modal-content {
+    margin-bottom: 2em;
+    color: #666;
+}
+
+.modal-close-button {
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: #000;
+    border: none;
+    padding: .5em 1em;
+    color: #fff;
+    box-shadow: 0 0 0 2px #000 inset;
+    border-radius: .25em;
+    cursor: pointer;
+    transition: background .4s ease, color .4s ease;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.spinner {
+    margin: 30px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    animation: spin 1.0s linear infinite;
+    border-bottom-color: #614ad3;
+}
+
+@keyframes spin {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}

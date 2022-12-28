@@ -1,0 +1,67 @@
+@media (min-width: 320px) and (max-width: 710px) {
+    .navbar {
+        font-size: 1rem;
+    }
+    
+    .route {
+        padding: 0.3rem;
+    }
+    
+    .dot {
+        display: none;
+    }
+
+    #footer-content {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    #terms, #privacy {
+        line-height: 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .search {
+        margin-top: 1rem;
+    }
+    
+    .modal-window {
+        width: 85vw;
+        padding: 0.5rem;
+    }
+
+    .accordion {
+        max-width: 85vw;
+    }
+
+    #about-container {
+        width: 85%;
+    }
+}
+
+@media (min-width: 710px) and (max-width: 878px) {
+    .modal-window {
+        width: 60vw;
+    }
+
+    .new-gadis-card, .new-mercadona-card {
+        width: 360px;
+    } 
+
+    #terms, #privacy {
+        line-height: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .accordion {
+        max-width: 80vw;
+    }
+
+    #about-container {
+        width: 70%;
+    }
+}
