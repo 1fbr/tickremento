@@ -6,7 +6,7 @@ const fragment = document.createDocumentFragment()
 
 export const createCard = (product, productsContainer) => {
   const newCard = document.createElement('article')
-  newCard.classList.add(`new-${product.supermarket.toLowerCase()}-card`)
+  newCard.classList.add(`${product.supermarket.toLowerCase()}-card`)
 
   const productInfo = document.createElement('div')
   productInfo.classList.add('product-info')
@@ -22,6 +22,7 @@ export const createCard = (product, productsContainer) => {
   productImage.src = product.img
   productImage.alt = product.name
   productImage.loading = 'lazy'
+  productImage.id = product.productId
 
   const supermarket = document.createElement('span')
   supermarket.textContent = product.supermarket
