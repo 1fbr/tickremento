@@ -35,10 +35,6 @@ footer {
     justify-content: center;
 }
 
-footer#after-content {
-    visibility: hidden;
-}
-
 #terms, #privacy {
     padding: 1rem;
     line-height: 2rem;
