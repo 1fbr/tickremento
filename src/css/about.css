@@ -7,6 +7,30 @@
     text-align: center;
 }
 
-.headers, .text {
+.headers {
     margin: 1rem;
+}
+
+.text {
+    margin: 1rem;
+    width: 70%;
+}
+
+.headers {
+    font-weight: bold;
+    overflow: hidden;
+    margin: 1rem; 
+    white-space: nowrap;
+    color: #000;
+    width: 10ch;
+    animation: typing 1.5s steps(10),
+    blink .5s step-end alternate;
+}
+
+@keyframes typing {
+    from { width: 0; border-right: 0.15em solid; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }

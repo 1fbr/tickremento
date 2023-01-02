@@ -1,6 +1,15 @@
 #faq-heading {
-    text-align: center;
-    padding: 1.5rem 0 0.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 4ch;
+  animation: typing 0.75s steps(4);
+  text-align: center;
+  padding: 1.5rem 0 0.5rem 0;
+  margin: 0 auto;
+}
+
+@keyframes typing {
+  from { width: 0; }
 }
 
 #faq-caption {
