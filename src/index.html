@@ -8,11 +8,11 @@
     <title>Tickremento | Inicio</title>
     <meta name="description" content="">
     <script src="./js/index.js" type="module" defer></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" >
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/media-queries.css">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" >
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -75,6 +75,16 @@
                     <input type="checkbox" id="Gadis">
                     <span class="slider round"></span>
                 </label>
+                <span class="supermarket">Familia</span>
+                <label class="switch" title="Familia">
+                    <input type="checkbox" id="Familia">
+                    <span class="slider round"></span>
+                </label>
+                <span class="supermarket">Froiz</span>
+                <label class="switch" title="Froiz">
+                    <input type="checkbox" id="Froiz">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <div class="search">
                 <input type="search" class="product-filter" placeholder="Buscar un producto..." value="">
@@ -91,16 +101,12 @@
         <div class="main-container"></div>
         <div class="spinner"></div>
     </main>
-    <footer id="after-content">
+    <footer>
         <section id="footer-content">
-            <div id="terms">
-                <p>El contenido mostrado en esta página es acrítico, no se pretende señalar a niguna entidad, solo mostrar de manera transparente la situación actual.</p>
-                <p>Los derechos de autor de las imágenes pertenecen a sus legítimos dueños, se indexan en la web desde su origen, en ningún momento se intenta apropiar de las mismas.</p>
-            </div>
-            <div id="privacy">
-                <p>Esta página no contiene cookies ni registra ningún tipo de información sobre el usuario.</p>
-                <p>Todos los derechos reservados. Tickremento - 2022 &copy;.</p>
-            </div>
+            <p>El contenido mostrado en esta página es acrítico, no se pretende señalar a niguna entidad, solo mostrar de manera transparente la situación actual.</p>
+            <p>Los derechos de autor de las imágenes pertenecen a sus legítimos dueños, se indexan en la web desde su origen, en ningún momento se intenta apropiar de las mismas.</p>
+            <p>Esta página no contiene cookies ni registra ningún tipo de información sobre el usuario.</p>
+          <span id="copyright">© 2022-2023 Tickremento.</span>
         </section>
     </footer>
 </body>
