@@ -88,10 +88,6 @@ nav {
     z-index: 1;
 }
 
-.dot {
-    padding: 0 1.5rem;
-}
-
 .navbar{
     display: flex;
     flex-direction: row;
@@ -122,6 +118,7 @@ nav {
 .route {
     display: flex;
     align-items: center;
+    padding: 0 1.5rem;
 }
 
 #copyright {
