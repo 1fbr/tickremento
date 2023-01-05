@@ -18,13 +18,19 @@
 	line-height: 1.5rem;
 }
 
+.accordion-container {
+  padding: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
 .accordion {
   max-width: 30vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   overflow: hidden;
   background: #102b6e;
-  margin: 1.5rem auto;
+  /* margin: 1.5rem auto; */
   position: relative;
 }
 

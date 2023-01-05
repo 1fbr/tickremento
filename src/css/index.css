@@ -4,13 +4,14 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    z-index: -1;
 }
 
-.new-mercadona-card:hover, .new-gadis-card:hover, .product-card:hover {
+.mercadona-card:hover, .gadis-card:hover, .familia-card:hover, .froiz-card:hover  .product-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.new-mercadona-card, .new-gadis-card, .product-card, .modal-window {
+.mercadona-card, .gadis-card, .familia-card, .froiz-card, .product-card, .modal-window {
     width: 400px;
     text-align: center;
     margin: 15px;
@@ -24,12 +25,16 @@
     background-color: #fff;
 }
 
-.new-mercadona-card {
+.mercadona-card {
     border: 2px solid rgba(20, 216, 20, 0.6);
 }
 
-.new-gadis-card {
+.gadis-card {
     border: 2px solid rgba(234, 214, 51, 0.6);
+}
+
+.familia-card, .froiz-card {
+    border: 2px solid rgba(228, 13, 13, 0.6);
 }
 
 .product-info, .filters, .checkboxes {
@@ -46,6 +51,7 @@
     position: sticky;
     top: 58px;
     width: 100%;
+    z-index: 1;
 }
 
 .search {
@@ -123,7 +129,7 @@ span#increment {
 }
 
 .supermarket {
-    padding: 1rem;
+    padding: 1rem 0.5rem 1rem 1rem;
 }
 
 .modal-window {
@@ -132,6 +138,7 @@ span#increment {
     border-radius: .5em;
     width: 30vw;
     margin: 2.5rem auto;
+    z-index: -1;
 }
 
 .modal-header {
@@ -161,8 +168,8 @@ span#increment {
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 46px;
+    height: 24px;
 }
   
 .switch input { 
@@ -186,9 +193,9 @@ span#increment {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
+    height: 16px;
+    width: 16px;
+    left: 2px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;

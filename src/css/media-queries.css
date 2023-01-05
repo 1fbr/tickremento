@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 710px) {
+@media (min-width: 320px) and (max-width: 810px) {
     .navbar {
         font-size: 1rem;
     }
@@ -16,13 +16,16 @@
         width: 100%;
     }
 
-    #terms, #privacy {
-        line-height: 1.5rem;
+    #footer-content p {
         font-size: 0.85rem;
     }
 
     .filters {
         flex-direction: column;
+    }
+
+    .checkboxes {
+        display: block;
     }
 
     .search {
@@ -43,17 +46,16 @@
     }
 }
 
-@media (min-width: 710px) and (max-width: 878px) {
+@media (min-width: 810px) and (max-width: 878px) {
     .modal-window {
         width: 60vw;
     }
 
-    .new-gadis-card, .new-mercadona-card {
+    .gadis-card, .mercadona-card, .familia-card {
         width: 360px;
     } 
 
-    #terms, #privacy {
-        line-height: 1.5rem;
+    #footer-content p {
         font-size: 0.95rem;
     }
 
