@@ -1,18 +1,16 @@
 import { getProducts, getAllProducts, getSupermarket } from './components/getProducts.js'
-import { limit, maxPages, gadisPages, mercadonaPages } from './utils/pageNumber.js'
+import { limit, maxPages, gadisPages, mercadonaPages, familiaPages, froizPages } from './utils/pageNumber.js'
 
-const footer = document.querySelector('footer')
-const search = document.querySelector('.product-filter')
-const supermarkets = document.querySelectorAll("input[type='checkbox']")
-const gadis = document.querySelector('#Gadis')
-const mercadona = document.querySelector('#Mercadona')
 const mainContainer = document.querySelector('.main-container')
-const spinner = document.querySelector('.spinner')
+const search = document.querySelector('.product-filter')
 const cleanSearch = document.querySelector('.clean-search')
-
-let actualPage = 1
+const checkboxes = document.querySelector('.checkboxes')
+const supermarkets = document.querySelectorAll("input[type='checkbox']")
+const spinner = document.querySelector('.spinner')
 const order = 1
+let actualPage = 1
 let searchTerm = ''
+let supermarketName = ''
 
 const removeChilds = (parent) => {
   while (parent.lastChild) {
@@ -21,12 +19,7 @@ const removeChilds = (parent) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  removeChilds(mainContainer)
   getProducts(actualPage, limit, order)
-})
-
-document.addEventListener('scroll', e => {
-  footer.style.visibility = 'visible'
 })
 
 const debounce = (func, delay) => {
@@ -45,14 +38,13 @@ search.addEventListener('input', debounce((e) => {
   spinner.style.display = 'block'
   removeChilds(mainContainer)
   searchTerm = e.target.value.toLowerCase()
-  gadis.checked = false
-  mercadona.checked = false
+
   if (e.target.value.length >= 2) {
     cleanSearch.disabled = false
-    getAllProducts(searchTerm)
     spinner.style.display = 'none'
-    footer.style.visibility = 'visible'
+    getAllProducts(searchTerm)
   }
+
   if (e.target.value.length === 0) {
     cleanSearch.disabled = true
     actualPage = 1
@@ -71,16 +63,23 @@ cleanSearch.addEventListener('click', () => {
 
 const handleSupermarketChange = (e) => {
   e.preventDefault()
-  spinner.style.display = 'block'
+  if (document.querySelector('.modal-window')) {
+    spinner.style.display = 'none'
+    return
+  } else {
+    spinner.style.display = 'block'
+  }
   search.value = ''
   actualPage = 1
   removeChilds(mainContainer)
 
-  let supermarketName = null
-  if (gadis.checked && !mercadona.checked) {
-    supermarketName = 'Gadis'
-  } else if (!gadis.checked && mercadona.checked) {
-    supermarketName = 'Mercadona'
+  for (let i = 0; i < supermarkets.length; i++) {
+    if (supermarkets[i].checked) {
+      supermarketName = supermarkets[i].id
+      break
+    } else {
+      supermarketName = ''
+    }
   }
 
   if (supermarketName) {
@@ -90,8 +89,17 @@ const handleSupermarketChange = (e) => {
   }
 }
 
-supermarkets.forEach((element) => {
-  element.addEventListener('change', handleSupermarketChange)
+checkboxes.addEventListener('change', function (e) {
+  const checkbox = e.target
+  if (checkbox.type === 'checkbox') {
+    const checkboxes = supermarkets
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i] !== checkbox) {
+        checkboxes[i].checked = false
+      }
+    }
+    handleSupermarketChange(e)
+  }
 })
 
 window.addEventListener('scroll', (scrollEvent) => {
@@ -104,23 +112,27 @@ window.addEventListener('scroll', (scrollEvent) => {
 })
 
 const newPage = () => {
-  actualPage++
-  let supermarket = null
-  if (gadis.checked) {
-    supermarket = 'Gadis'
-  } else if (mercadona.checked) {
-    supermarket = 'Mercadona'
+  if (document.querySelector('.modal-window')) {
+    spinner.style.display = 'none'
+    return
   }
 
-  if (supermarket) {
-    if (supermarket === 'Gadis' && actualPage > gadisPages) {
+  actualPage++
+  if (supermarketName !== '') {
+    if (supermarketName === 'Gadis' && actualPage > gadisPages) {
       spinner.style.display = 'none'
       return
-    } else if (supermarket === 'Mercadona' && actualPage > mercadonaPages) {
+    } else if (supermarketName === 'Mercadona' && actualPage > mercadonaPages) {
+      spinner.style.display = 'none'
+      return
+    } else if (supermarketName === 'Familia' && actualPage > familiaPages) {
+      spinner.style.display = 'none'
+      return
+    } else if (supermarketName === 'Froiz' && actualPage > froizPages) {
       spinner.style.display = 'none'
       return
     }
-    getSupermarket(supermarket, actualPage, limit, order)
+    getSupermarket(supermarketName, actualPage, limit, order)
   } else {
     if (actualPage > maxPages) {
       spinner.style.display = 'none'
