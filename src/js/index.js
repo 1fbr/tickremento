@@ -1,10 +1,10 @@
-import { getProducts, getAllProducts, getSupermarket } from './components/getProducts.js'
+import { getProducts, getSearchResults, getSupermarketProducts } from './components/getProducts.js'
 import { limit, maxPages, gadisPages, mercadonaPages, familiaPages, froizPages } from './utils/pageNumber.js'
 
 const mainContainer = document.querySelector('.main-container')
 const search = document.querySelector('.product-filter')
 const cleanSearch = document.querySelector('.clean-search')
-const checkboxes = document.querySelector('.checkboxes')
+const checkboxesWrapper = document.querySelector('.checkboxes-wrapper')
 const supermarkets = document.querySelectorAll("input[type='checkbox']")
 const spinner = document.querySelector('.spinner')
 const order = 1
@@ -42,7 +42,7 @@ search.addEventListener('input', debounce((e) => {
   if (e.target.value.length >= 2) {
     cleanSearch.disabled = false
     spinner.style.display = 'none'
-    getAllProducts(searchTerm)
+    getSearchResults(searchTerm)
   }
 
   if (e.target.value.length === 0) {
@@ -83,19 +83,19 @@ const handleSupermarketChange = (e) => {
   }
 
   if (supermarketName) {
-    getSupermarket(supermarketName, actualPage, limit, order)
+    getSupermarketProducts(supermarketName, actualPage, limit, order)
   } else {
     getProducts(actualPage, limit, order)
   }
 }
 
-checkboxes.addEventListener('change', function (e) {
+checkboxesWrapper.addEventListener('change', function (e) {
   const checkbox = e.target
   if (checkbox.type === 'checkbox') {
-    const checkboxes = supermarkets
-    for (let i = 0; i < checkboxes.length; i++) {
-      if (checkboxes[i] !== checkbox) {
-        checkboxes[i].checked = false
+    const checkboxesList = supermarkets
+    for (let i = 0; i < checkboxesList.length; i++) {
+      if (checkboxesList[i] !== checkbox) {
+        checkboxesList[i].checked = false
       }
     }
     handleSupermarketChange(e)
@@ -132,7 +132,7 @@ const newPage = () => {
       spinner.style.display = 'none'
       return
     }
-    getSupermarket(supermarketName, actualPage, limit, order)
+    getSupermarketProducts(supermarketName, actualPage, limit, order)
   } else {
     if (actualPage > maxPages) {
       spinner.style.display = 'none'

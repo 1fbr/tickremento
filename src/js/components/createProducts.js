@@ -10,10 +10,10 @@ export const renderProducts = (data) => {
   renderCards(data, 'products-container')
 }
 
-export const filterProducts = (data) => {
+export const renderSearchResults = (data) => {
   renderCards(data, 'products-container')
 }
 
-export const renderSupermarket = (data) => {
+export const renderSupermarketProducts = (data) => {
   renderCards(data, 'products-container')
 }
