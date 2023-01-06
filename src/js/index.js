@@ -118,17 +118,15 @@ const newPage = () => {
   }
 
   actualPage++
+  const supermarketPages = {
+    Gadis: gadisPages,
+    Mercadona: mercadonaPages,
+    Familia: familiaPages,
+    Froiz: froizPages
+  }
+
   if (supermarketName !== '') {
-    if (supermarketName === 'Gadis' && actualPage > gadisPages) {
-      spinner.style.display = 'none'
-      return
-    } else if (supermarketName === 'Mercadona' && actualPage > mercadonaPages) {
-      spinner.style.display = 'none'
-      return
-    } else if (supermarketName === 'Familia' && actualPage > familiaPages) {
-      spinner.style.display = 'none'
-      return
-    } else if (supermarketName === 'Froiz' && actualPage > froizPages) {
+    if (actualPage > supermarketPages[supermarketName]) {
       spinner.style.display = 'none'
       return
     }
