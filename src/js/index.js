@@ -55,6 +55,8 @@ const handleSupermarketChange = (e) => {
     if (supermarkets[i].checked) {
       supermarketName = supermarkets[i].id
       break
+    } else {
+      supermarketName = ''
     }
   }
 
@@ -91,10 +93,6 @@ window.addEventListener('scroll', debouncePagination)
 
 const newPage = () => {
   isModalDisplayed()
-  getProductsForSupermarket(supermarketName, actualPage, limit, order)
-}
-
-function getProductsForSupermarket (supermarketName, actualPage, limit, order) {
   actualPage++
   const targetPages = supermarketName !== '' ? supermarketPages[supermarketName] : maxPages
 
