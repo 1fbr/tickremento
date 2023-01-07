@@ -7,11 +7,14 @@ const handleResponse = (response) => {
   return (response.ok) ? response.json() : Promise.reject(response)
 }
 
-const getData = (endpoint, callback) => {
-  fetch(endpoint)
-    .then(handleResponse)
-    .then(data => callback(data))
-    .catch(err => renderErrors(err))
+const getData = async (endpoint, callback) => {
+  try {
+    const response = await fetch(endpoint)
+    const data = await handleResponse(response)
+    callback(data)
+  } catch (err) {
+    renderErrors(err)
+  }
 }
 
 export const getProducts = (currentPage) => {
