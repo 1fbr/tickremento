@@ -20,7 +20,7 @@ export const createCard = (product, productsContainer) => {
 
   const productImage = document.createElement('img')
   productImage.src = product.img
-  productImage.alt = product.name
+  productImage.alt = `Imagen del producto ${product.name}`
   productImage.loading = 'lazy'
   productImage.id = product.productId
 
