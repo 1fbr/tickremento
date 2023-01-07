@@ -78,14 +78,16 @@ checkboxesWrapper.addEventListener('change', function (e) {
   }
 })
 
-window.addEventListener('scroll', (scrollEvent) => {
+const debouncePagination = debounce((scrollEvent) => {
   const { scrollHeight, scrollTop } = scrollEvent.target.documentElement
   if (search.value.length === 0) {
     if (scrollTop + window.innerHeight >= scrollHeight) {
       setTimeout(newPage, 150)
     }
   }
-})
+}, 200)
+
+window.addEventListener('scroll', debouncePagination)
 
 const newPage = () => {
   isModalDisplayed()
