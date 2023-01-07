@@ -1,5 +1,6 @@
 import { getProducts, getSearchResults, getSupermarketProducts } from './components/getProducts.js'
-import { limit, maxPages, gadisPages, mercadonaPages, familiaPages, froizPages } from './utils/pageNumber.js'
+import { limit, maxPages, supermarketPages } from './utils/pageNumber.js'
+import { removeChilds, debounce, isModalDisplayed } from './utils/eventUtils.js'
 
 const mainContainer = document.querySelector('.main-container')
 const search = document.querySelector('.product-filter')
@@ -12,30 +13,12 @@ let actualPage = 1
 let searchTerm = ''
 let supermarketName = ''
 
-const removeChilds = (parent) => {
-  while (parent.lastChild) {
-    parent.removeChild(parent.lastChild)
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   getProducts(actualPage, limit, order)
 })
 
-const debounce = (func, delay) => {
-  let timeoutId
-  return (...args) => {
-    if (timeoutId) {
-      clearTimeout(timeoutId)
-    }
-    timeoutId = setTimeout(() => {
-      func(...args)
-    }, delay)
-  }
-}
-
 search.addEventListener('input', debounce((e) => {
-  spinner.style.display = 'block'
+  isModalDisplayed()
   removeChilds(mainContainer)
   searchTerm = e.target.value.toLowerCase()
 
@@ -53,32 +36,25 @@ search.addEventListener('input', debounce((e) => {
 }, 250))
 
 cleanSearch.addEventListener('click', () => {
+  isModalDisplayed()
   removeChilds(mainContainer)
   cleanSearch.disabled = true
   search.value = ''
-  spinner.style.display = 'block'
   actualPage = 1
   getProducts(actualPage, limit, order)
 })
 
 const handleSupermarketChange = (e) => {
   e.preventDefault()
-  if (document.querySelector('.modal-window')) {
-    spinner.style.display = 'none'
-    return
-  } else {
-    spinner.style.display = 'block'
-  }
+  isModalDisplayed()
+  removeChilds(mainContainer)
   search.value = ''
   actualPage = 1
-  removeChilds(mainContainer)
 
   for (let i = 0; i < supermarkets.length; i++) {
     if (supermarkets[i].checked) {
       supermarketName = supermarkets[i].id
       break
-    } else {
-      supermarketName = ''
     }
   }
 
@@ -112,30 +88,22 @@ window.addEventListener('scroll', (scrollEvent) => {
 })
 
 const newPage = () => {
-  if (document.querySelector('.modal-window')) {
+  isModalDisplayed()
+  getProductsForSupermarket(supermarketName, actualPage, limit, order)
+}
+
+function getProductsForSupermarket (supermarketName, actualPage, limit, order) {
+  actualPage++
+  const targetPages = supermarketName !== '' ? supermarketPages[supermarketName] : maxPages
+
+  if (actualPage > targetPages) {
     spinner.style.display = 'none'
     return
   }
 
-  actualPage++
-  const supermarketPages = {
-    Gadis: gadisPages,
-    Mercadona: mercadonaPages,
-    Familia: familiaPages,
-    Froiz: froizPages
-  }
-
   if (supermarketName !== '') {
-    if (actualPage > supermarketPages[supermarketName]) {
-      spinner.style.display = 'none'
-      return
-    }
     getSupermarketProducts(supermarketName, actualPage, limit, order)
   } else {
-    if (actualPage > maxPages) {
-      spinner.style.display = 'none'
-      return
-    }
     getProducts(actualPage, limit, order)
   }
 }

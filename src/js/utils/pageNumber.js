@@ -6,7 +6,14 @@ const FROIZ_PRODUCTS = 121
 
 export const limit = 60
 export const maxPages = Math.ceil(TOTAL_PRODUCTS / limit)
-export const gadisPages = Math.ceil(GADIS_PRODUCTS / limit)
-export const mercadonaPages = Math.ceil(MERCADONA_PRODUCTS / limit)
-export const familiaPages = Math.ceil(FAMILIA_PRODUCTS / limit)
-export const froizPages = Math.ceil(FROIZ_PRODUCTS / limit)
+const gadisPages = Math.ceil(GADIS_PRODUCTS / limit)
+const mercadonaPages = Math.ceil(MERCADONA_PRODUCTS / limit)
+const familiaPages = Math.ceil(FAMILIA_PRODUCTS / limit)
+const froizPages = Math.ceil(FROIZ_PRODUCTS / limit)
+
+export const supermarketPages = {
+  Gadis: gadisPages,
+  Mercadona: mercadonaPages,
+  Familia: familiaPages,
+  Froiz: froizPages
+}
