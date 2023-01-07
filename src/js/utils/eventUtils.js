@@ -21,7 +21,7 @@ export const debounce = (func, delay) => {
 export const isModalDisplayed = () => {
   if (document.querySelector('.modal-window')) {
     spinner.style.display = 'none'
-  } else {
-    spinner.style.display = 'block'
+    return true
   }
+  return false
 }

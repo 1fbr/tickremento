@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 search.addEventListener('input', debounce((e) => {
-  isModalDisplayed()
+  spinner.style.display = 'block'
   removeChilds(mainContainer)
   searchTerm = e.target.value.toLowerCase()
 
@@ -35,7 +35,7 @@ search.addEventListener('input', debounce((e) => {
 }, 250))
 
 cleanSearch.addEventListener('click', () => {
-  isModalDisplayed()
+  spinner.style.display = 'block'
   removeChilds(mainContainer)
   cleanSearch.disabled = true
   search.value = ''
@@ -44,8 +44,9 @@ cleanSearch.addEventListener('click', () => {
 })
 
 const handleSupermarketChange = (e) => {
+  spinner.style.display = 'block'
+  if (isModalDisplayed()) return
   e.preventDefault()
-  isModalDisplayed()
   removeChilds(mainContainer)
   search.value = ''
   actualPage = 1
@@ -91,7 +92,7 @@ const debouncePagination = debounce((scrollEvent) => {
 window.addEventListener('scroll', debouncePagination)
 
 const newPage = () => {
-  isModalDisplayed()
+  if (isModalDisplayed()) return
   actualPage++
   const targetPages = supermarketName !== '' ? supermarketPages[supermarketName] : maxPages
 
