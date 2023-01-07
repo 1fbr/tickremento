@@ -1,5 +1,5 @@
 import { getProducts, getSearchResults, getSupermarketProducts } from './components/getProducts.js'
-import { limit, maxPages, supermarketPages } from './utils/pageNumber.js'
+import { maxPages, supermarketPages } from './utils/pageNumber.js'
 import { removeChilds, debounce, isModalDisplayed } from './utils/eventUtils.js'
 
 const mainContainer = document.querySelector('.main-container')
@@ -8,13 +8,12 @@ const cleanSearch = document.querySelector('.clean-search')
 const checkboxesWrapper = document.querySelector('.checkboxes-wrapper')
 const supermarkets = document.querySelectorAll("input[type='checkbox']")
 const spinner = document.querySelector('.spinner')
-const order = 1
 let actualPage = 1
 let searchTerm = ''
 let supermarketName = ''
 
 document.addEventListener('DOMContentLoaded', () => {
-  getProducts(actualPage, limit, order)
+  getProducts(actualPage)
 })
 
 search.addEventListener('input', debounce((e) => {
@@ -31,7 +30,7 @@ search.addEventListener('input', debounce((e) => {
   if (e.target.value.length === 0) {
     cleanSearch.disabled = true
     actualPage = 1
-    getProducts(actualPage, limit, order)
+    getProducts(actualPage)
   }
 }, 250))
 
@@ -41,7 +40,7 @@ cleanSearch.addEventListener('click', () => {
   cleanSearch.disabled = true
   search.value = ''
   actualPage = 1
-  getProducts(actualPage, limit, order)
+  getProducts(actualPage)
 })
 
 const handleSupermarketChange = (e) => {
@@ -61,9 +60,9 @@ const handleSupermarketChange = (e) => {
   }
 
   if (supermarketName) {
-    getSupermarketProducts(supermarketName, actualPage, limit, order)
+    getSupermarketProducts(supermarketName, actualPage)
   } else {
-    getProducts(actualPage, limit, order)
+    getProducts(actualPage)
   }
 }
 
@@ -102,8 +101,8 @@ const newPage = () => {
   }
 
   if (supermarketName !== '') {
-    getSupermarketProducts(supermarketName, actualPage, limit, order)
+    getSupermarketProducts(supermarketName, actualPage)
   } else {
-    getProducts(actualPage, limit, order)
+    getProducts(actualPage)
   }
 }
