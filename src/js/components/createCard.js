@@ -5,11 +5,12 @@ const main = document.querySelector('.main-container')
 const fragment = document.createDocumentFragment()
 
 export const createCard = (product, productsContainer) => {
+  const supermarketName = `${product.supermarket.toLowerCase()}`
   const newCard = document.createElement('article')
-  newCard.classList.add(`${product.supermarket.toLowerCase()}-card`)
+  newCard.classList.add(`${supermarketName}-card`)
 
   const productInfo = document.createElement('div')
-  productInfo.classList.add('product-info')
+  productInfo.classList.add(`${supermarketName}-product-info`)
 
   const innerInfo = document.createElement('div')
   innerInfo.classList.add('inner-info')
