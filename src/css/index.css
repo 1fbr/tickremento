@@ -1,256 +1,283 @@
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .products-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    z-index: -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  z-index: -1;
 }
 
-.mercadona-card:hover, .gadis-card:hover, .familia-card:hover, .froiz-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.mercadona-card:hover,
+.gadis-card:hover,
+.familia-card:hover,
+.froiz-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.mercadona-card, .gadis-card, .familia-card, .froiz-card {
-    width: 400px;
-    text-align: center;
-    margin: 15px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+.mercadona-card,
+.gadis-card,
+.familia-card,
+.froiz-card {
+  width: 400px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
-.mercadona-product-info, .gadis-product-info, .familia-product-info, .froiz-product-info, .filters, .checkboxes-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.mercadona-product-info,
+.gadis-product-info,
+.familia-product-info,
+.froiz-product-info,
+.filters,
+.checkboxes-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.mercadona-product-info, .gadis-product-info, .familia-product-info, .froiz-product-info {
-    border-radius: 0.5rem;
-    padding: 0.25rem;
-}
-
-.filters, .checkboxes-wrapper, .modal-window {
-    background-color: #fff;
-}
-
-.mercadona-card, .mercadona-product-info img {
-    border: 2px solid #229e6b;
-    background-color: rgba(34, 158, 107, 0.25)
-}
-
-.gadis-card, .gadis-product-info img {
-    border: 2px solid #F3CA27;
-    background-color: rgba(243, 202, 39, 0.25);
-}
-
-.familia-card, .familia-product-info img {
-    border: 2px solid #b92c32;
-    background-color: rgba(185, 44, 50, 0.25);
-}
-
-.froiz-card, .froiz-product-info img {
-    border: 2px solid #b52f1a;
-    background-color: rgba(181, 47, 26, 0.25);
+.mercadona-product-info,
+.gadis-product-info,
+.familia-product-info,
+.froiz-product-info {
+  border-radius: 0.5rem;
+  padding: 0.25rem;
 }
 
 .filters {
-    padding: 1rem 0 0.5rem 0;  
-    position: -webkit-sticky;
-    position: sticky;
-    top: 58px;
-    width: 100%;
-    z-index: 1;
+  background-color: #f0dddd;
+}
+
+.mercadona-card,
+.mercadona-product-info img {
+  border: 2px solid #229e6b;
+  background-color: rgba(34, 158, 107, 0.15);
+}
+
+.gadis-card,
+.gadis-product-info img {
+  border: 2px solid #f3ca27;
+  background-color: rgba(243, 202, 39, 0.15);
+}
+
+.familia-card,
+.familia-product-info img {
+  border: 2px solid #b92c32;
+  background-color: rgba(185, 44, 50, 0.15);
+}
+
+.froiz-card,
+.froiz-product-info img {
+  border: 2px solid #b52f1a;
+  background-color: rgba(181, 47, 26, 0.15);
+}
+
+.filters {
+  padding: 1rem 0 0.5rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 101px;
+  width: 100%;
+  z-index: 1;
 }
 
 .search-wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .clean-search {
-    display: flex;
-    align-items: center;
-    width: 5.5rem;
-    height: 35px;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 5.5rem;
+  height: 35px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
 }
 
 .clean-search:disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 #clean-button {
-    margin-left: 0.15rem;
+  margin-left: 0.15rem;
 }
 
 .price-info {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 .inner-info {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-items: baseline;
-    text-align: initial;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: baseline;
+  text-align: initial;
 }
 
 a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.mercadona-product-info a, .gadis-product-info a, .familia-product-info a, .froiz-product-info  a {
-    width: 30%
+.mercadona-product-info a,
+.gadis-product-info a,
+.familia-product-info a,
+.froiz-product-info a {
+  width: 30%;
 }
 
-.mercadona-product-info img, .gadis-product-info img, .familia-product-info img, .froiz-product-info  img {
-    width: 85px;
-    height: 85px;
-    border-radius: 0.5rem;
-    padding: 0.25rem;
-    background-color: white;
+.mercadona-product-info img,
+.gadis-product-info img,
+.familia-product-info img,
+.froiz-product-info img {
+  width: 85px;
+  height: 85px;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  background-color: white;
 }
 
 span#product-name {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
-span#supermarket-name, span#actual-price {
-    font-size: 1rem;
-    font-weight: bold;
+span#supermarket-name,
+span#actual-price {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 span#increment {
-    padding-left: 15px;
-    font-size: 0.85rem;
-    font-weight: bold;
+  padding-left: 15px;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 .product-filter {
-    margin: 0 1rem;
-	width: 250px;
-	padding: .375rem .75rem;
-	font-size: 1rem;
-	border: 1px solid #ced4da;
-	border-radius: .25rem;
+  margin: 0 1rem;
+  width: 250px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
 
 .supermarket {
-    padding: 1rem 0.5rem 1rem 1rem;
+  padding: 1rem 0.5rem 1rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .modal-window {
-    padding: 2em 3em;
-    text-align: center;
-    border-radius: .5em;
-    width: 30vw;
-    margin: 2.5rem auto;
-    z-index: -1;
+  padding: 2em 3em;
+  text-align: center;
+  border-radius: 0.5em;
+  width: 30vw;
+  margin: 2.5rem auto;
+  z-index: -1;
+  background-color: #f2d4d4;
 }
 
 .modal-header {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: .5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 .modal-content {
-    margin-bottom: 2em;
-    color: #666;
-}
-
-.modal-close-button {
-    font-size: 1.25em;
-    font-weight: bold;
-    background-color: #000;
-    border: none;
-    padding: .5em 1em;
-    color: #fff;
-    box-shadow: 0 0 0 2px #000 inset;
-    border-radius: .25em;
-    cursor: pointer;
-    transition: background .4s ease, color .4s ease;
+  color: #666;
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 46px;
-    height: 24px;
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
 }
-  
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 2px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
-  
+
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px;
 }
-  
+
 .slider.round:before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .spinner {
-    margin: 30px auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    animation: spin 1.0s linear infinite;
-    border-bottom-color: #614ad3;
+  /* display: none; */
+  margin: 30px auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 235, 235);
+  animation: spin 1s linear infinite;
+  border-bottom-color: #3e1ddf;
 }
 
 @keyframes spin {
-    from {transform: rotate(0);}
-    to {transform: rotate(360deg);}
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
