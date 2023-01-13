@@ -1,146 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulta dudas acerca del proyecto.">
-    <meta property="og:title" content="FAQ sobre la web.">
-    <meta property="og:description" content="Consulta dudas acerca del proyecto.">
-    <meta property="og:site_name" content="Tickremento">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tickremento.netlify.app">
-    <meta property="og:image" content="https://tickremento.netlify.app/img/logo.webp">
-    <meta property="og:locale:alternate" content="es_ES"/>
-    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Consulta dudas acerca del proyecto." />
+    <meta property="og:title" content="FAQ sobre la web." />
+    <meta
+      property="og:description"
+      content="Consulta dudas acerca del proyecto."
+    />
+    <meta property="og:site_name" content="Tickremento" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tickremento.netlify.app" />
+    <meta
+      property="og:image"
+      content="https://tickremento.netlify.app/img/character.webp"
+    />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <link rel="icon" rel="shortcut icon" href="../img/favicon.webp" />
     <title>Tickremento | FAQ</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/faq.css">
-    <link rel="stylesheet" href="../css/media-queries.css">
- </head>
-<body>
-    <header class="header">
-        <div id="logo">
-            <img src="../img/logo.webp" alt="Web logo">
-            <h1 id="title">Tickremento</h1>
-        </div>
-    </header>
-    <nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/faq.css" />
+    <link rel="stylesheet" href="../css/media-queries.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
         <section class="navbar">
-          <div class="route">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-                  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-              </svg>
-              <a href="../index.html" id="home">Inicio</a>
-          </div>
-          <div class="route">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pin" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M15 4.5l-4 4l-4 1.5l-1.5 1.5l7 7l1.5 -1.5l1.5 -4l4 -4" />
-                  <line x1="9" y1="15" x2="4.5" y2="19.5" />
-                  <line x1="14.5" y1="4" x2="20" y2="9.5" />
-              </svg>
-              <a href="./about.html" id="about">Acerca</a>
-          </div>
-          <div class="route">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <circle cx="12" cy="7" r="4" />
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-              </svg>
-              <a href="./faq.html" id="faq">FAQ</a>
-          </div>
-          <div class="route">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                  <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" />
-              </svg>
-              <a href="mailto:tickremento@proton.me" id="contact">Contacto</a>
-          </div>
+          <a href="../index.html" id="home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-home"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <polyline points="5 12 3 12 12 3 21 12 19 12" />
+              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+              <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+            </svg>
+            <span>Inicio</span>
+          </a>
+          <a href="./about.html" id="about">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-pin"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M15 4.5l-4 4l-4 1.5l-1.5 1.5l7 7l1.5 -1.5l1.5 -4l4 -4" />
+              <line x1="9" y1="15" x2="4.5" y2="19.5" />
+              <line x1="14.5" y1="4" x2="20" y2="9.5" />
+            </svg>
+            <span>Acerca</span>
+          </a>
+          <img
+            src="../img/empty-wallet.webp"
+            alt="Imagen de unas manos abriendo una cartera vacía"
+          />
+          <a href="./faq.html" id="faq">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-user"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg>
+            <span>FAQ</span>
+          </a>
+          <a href="mailto:tickremento@proton.me" id="contact">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-send"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+              <path
+                d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5"
+              />
+            </svg>
+            <span>Contacto</span>
+          </a>
         </section>
-    </nav>
+      </nav>
+    </header>
     <main>
-        <h2 id="faq-heading">FAQ.</h2>
-        <p id="faq-caption">En esta sección puede consultar algunas respuestas a preguntas que estén pasando por su cabeza.</p>
-        <section class="accordion-container">
-            <div class="accordion">
-                <article>
-                    <input type="radio" name="accordion" id="question1" class="accordion-input">
-                    <label for="question1" class="accordion-label">¿Por qué Tickremento?</label>
-                    <div class="accordion-content">
-                        <p>Por el incremento en el precio de los tickets de la compra.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question2" class="accordion-input">
-                    <label for="question2" class="accordion-label">¿Son reales los datos?</label>
-                    <div class="accordion-content">
-                        <p>Tan reales como difíciles de digerir.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question3" class="accordion-input">
-                    <label for="question3" class="accordion-label">¿Cómo obtienes los datos?</label>
-                    <div class="accordion-content">
-                        <p>Son datos de dominio público. Para los datos antiguos he tirado de tickets de compra, de información en internet, una vez tienes eso ya es ir comparando en las web de cada supermercado con tu código postal. Ese proceso se podría automatizar, pero no es el caso actualmente.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question4" class="accordion-input">
-                    <label for="question4" class="accordion-label">¿Se tienen en cuenta precios de oferta o promociones?</label>
-                    <div class="accordion-content">
-                        <p>No, los datos se basan en el precio real.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question5" class="accordion-input">
-                    <label for="question5" class="accordion-label">Yo creo que compré x producto en x mes a un precio más alto/bajo.</label>
-                    <div class="accordion-content">
-                        <p>Es posible, ya que en el mismo mes un producto ha podido tener varios precios, en esta web solo se registra el último de ellos, es decir, como cierra el mes. Por otro lado, quizás en tu lugar de residencia ese producto tenga otro coste.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question6" class="accordion-input">
-                    <label for="question6" class="accordion-label">No encuentro el producto que me interesa.</label>
-                    <div class="accordion-content">
-                        <p>La página abarca una cantidad de productos suficiente para lograr el cometido buscado, pero no deja de ser limitado. No esperes encontrar cualquier producto.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question7" class="accordion-input">
-                    <label for="question7" class="accordion-label">El enlace de una imagen me lleva a una página 404.</label>
-                    <div class="accordion-content">
-                        <p>Los supermercados retiran productos de sus webs de vez en cuando. También puede ser que el enlace esté mal, si observas eso, no dudes en avisarme.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question8" class="accordion-input">
-                    <label for="question8" class="accordion-label">¡He encontrado un error!</label>
-                    <div class="accordion-content">
-                        <p>¡Cuéntamelo! Tienes mi contacto.</p>
-                    </div>
-                </article>
-                <article>
-                    <input type="radio" name="accordion" id="question9" class="accordion-input">
-                    <label for="question9" class="accordion-label">¿La página se seguirá actualizando?</label>
-                    <div class="accordion-content">
-                        <p>¡Sí! La intención es que en el futuro se actualice automáticamente, entre otras mejoras y nuevas funcionalidades que vendrán próximamente.</p>
-                    </div>
-                </article>
+      <section class="accordion-container">
+        <div class="faq-title">
+          <img
+            src="../img/character.webp"
+            alt="Imagen de un personaje mirando sorprendido un costoso ticket de compra"
+          />
+          <h1 id="faq-heading">FAQ.</h1>
+        </div>
+        <div class="accordion">
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question1"
+              class="accordion-input"
+            />
+            <label for="question1" class="accordion-label"
+              >¿Por qué Tickremento?</label
+            >
+            <div class="accordion-content">
+              <p>Por el incremento en el precio de los tickets de la compra.</p>
             </div>
-        </section>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question2"
+              class="accordion-input"
+            />
+            <label for="question2" class="accordion-label"
+              >¿Son reales los datos?</label
+            >
+            <div class="accordion-content">
+              <p>Tan reales como difíciles de digerir.</p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question3"
+              class="accordion-input"
+            />
+            <label for="question3" class="accordion-label"
+              >¿Cómo obtienes los datos?</label
+            >
+            <div class="accordion-content">
+              <p>
+                Son datos de dominio público. Para los datos antiguos he tirado
+                de tickets de compra, de información en internet, una vez tienes
+                eso ya es ir comparando en las web de cada supermercado con tu
+                código postal. Ese proceso se podría automatizar, pero no es el
+                caso actualmente.
+              </p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question4"
+              class="accordion-input"
+            />
+            <label for="question4" class="accordion-label"
+              >¿Se tienen en cuenta precios de oferta o promociones?</label
+            >
+            <div class="accordion-content">
+              <p>No, los datos se basan en el precio real.</p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question5"
+              class="accordion-input"
+            />
+            <label for="question5" class="accordion-label"
+              >Yo creo que compré x producto en x mes a un precio más
+              alto/bajo.</label
+            >
+            <div class="accordion-content">
+              <p>
+                Es posible, ya que en el mismo mes un producto ha podido tener
+                varios precios, en esta web solo se registra el último de ellos,
+                es decir, como cierra el mes. Por otro lado, quizás en tu lugar
+                de residencia ese producto tenga otro coste.
+              </p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question6"
+              class="accordion-input"
+            />
+            <label for="question6" class="accordion-label"
+              >No encuentro el producto que me interesa.</label
+            >
+            <div class="accordion-content">
+              <p>
+                La página abarca una cantidad de productos suficiente para
+                lograr el cometido buscado, pero no deja de ser limitado. No
+                esperes encontrar cualquier producto.
+              </p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question7"
+              class="accordion-input"
+            />
+            <label for="question7" class="accordion-label"
+              >El enlace de una imagen me lleva a una página 404.</label
+            >
+            <div class="accordion-content">
+              <p>
+                Los supermercados retiran productos de sus webs de vez en
+                cuando. También puede ser que el enlace esté mal, si observas
+                eso, no dudes en avisarme.
+              </p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question8"
+              class="accordion-input"
+            />
+            <label for="question8" class="accordion-label"
+              >¡He encontrado un error!</label
+            >
+            <div class="accordion-content">
+              <p>¡Cuéntamelo! Tienes mi contacto.</p>
+            </div>
+          </article>
+          <article>
+            <input
+              type="radio"
+              name="accordion"
+              id="question9"
+              class="accordion-input"
+            />
+            <label for="question9" class="accordion-label"
+              >¿La página se seguirá actualizando?</label
+            >
+            <div class="accordion-content">
+              <p>
+                ¡Sí! La intención es que en el futuro se actualice
+                automáticamente, entre otras mejoras y nuevas funcionalidades
+                que vendrán próximamente.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
     <footer>
-        <section id="footer-content">
-            <p>El contenido mostrado en esta página es acrítico, no se pretende señalar a niguna entidad, solo mostrar de manera transparente la situación actual.</p>
-            <p>Los derechos de autor de las imágenes pertenecen a sus legítimos dueños, se indexan en la web desde su origen, en ningún momento se intenta apropiar de las mismas.</p>
-            <p>Esta página no contiene cookies ni registra ningún tipo de información sobre el usuario.</p>
-            <span id="copyright">© 2022-2023 Tickremento.</span>
-        </section>
+      <section id="footer-content">
+        <p>
+          El contenido mostrado en esta página es acrítico, no se pretende
+          señalar a niguna entidad, solo mostrar de manera transparente la
+          situación actual.
+        </p>
+        <p>
+          Los derechos de autor de las imágenes pertenecen a sus legítimos
+          dueños, se indexan en la web desde su origen, en ningún momento se
+          intenta apropiar de las mismas.
+        </p>
+        <p>
+          Esta página no contiene cookies ni registra ningún tipo de información
+          sobre el usuario.
+        </p>
+        <span id="copyright">© 2022-2023 Tickremento.</span>
+      </section>
     </footer>
-</body>
+  </body>
 </html>
