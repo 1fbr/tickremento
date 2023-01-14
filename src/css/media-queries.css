@@ -1,69 +1,104 @@
+@media (min-width: 320px) and (max-width: 500px) {
+  .checkboxes-wrapper {
+    display: block;
+  }
+
+  .headers {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+  }
+
+  article {
+    padding: 1rem 0;
+  }
+
+  article p {
+    line-height: 1.5rem;
+    padding: 0.35rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 950px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .checkboxes-wrapper {
+    padding: 1rem;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 810px) {
-    .navbar {
-        font-size: 1rem;
-    }
-    
-    .route {
-        padding: 0.3rem;
-    }
-    
-    .dot {
-        display: none;
-    }
+  main {
+    padding: 0;
+  }
 
-    #footer-content {
-        font-size: 0.9rem;
-        width: 100%;
-    }
+  .navbar a {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
 
-    #footer-content p {
-        font-size: 0.85rem;
-    }
+  .dot {
+    display: none;
+  }
 
-    .filters {
-        flex-direction: column;
-    }
+  #footer-content {
+    font-size: 0.9rem;
+    width: 100%;
+  }
 
-    .checkboxes {
-        display: block;
-    }
+  #footer-content p {
+    font-size: 0.85rem;
+  }
 
-    .search {
-        margin-top: 1rem;
-    }
-    
-    .modal-window {
-        width: 85vw;
-        padding: 0.5rem;
-    }
+  .search {
+    margin-top: 1rem;
+  }
 
-    .accordion {
-        max-width: 85vw;
-    }
+  .modal-window {
+    width: 85vw;
+    padding: 0.5rem;
+  }
 
-    #about-container {
-        width: 85%;
-    }
+  .accordion {
+    width: 85vw;
+  }
+
+  .accordion-content {
+    font-size: 1rem;
+  }
+
+  #about-container {
+    width: 100%;
+  }
 }
 
 @media (min-width: 810px) and (max-width: 878px) {
-    .modal-window {
-        width: 60vw;
-    }
+  .modal-window {
+    width: 60vw;
+  }
 
-    .gadis-card, .mercadona-card, .familia-card {
-        width: 360px;
-    } 
+  .navbar a {
+    padding: 0 1.5rem;
+  }
 
-    #footer-content p {
-        font-size: 0.95rem;
-    }
+  .gadis-card,
+  .mercadona-card,
+  .familia-card {
+    width: 360px;
+  }
 
-    .accordion {
-        max-width: 80vw;
-    }
+  #footer-content p {
+    font-size: 0.95rem;
+  }
 
-    #about-container {
-        width: 70%;
-    }
+  .accordion {
+    width: 85vw;
+  }
+
+  #about-container {
+    width: 70%;
+  }
 }
