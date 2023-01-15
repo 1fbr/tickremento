@@ -1,5 +1,5 @@
 export let bgColor = 'rgb(255, 99, 132)'
-export let borderColor = 'rgb(255, 99, 132)'
+export let borderColor = 'rgb(255, 0, 0)'
 
 const setColor = (elements, color) => {
   elements.forEach(element => {
@@ -33,6 +33,6 @@ const defineChartColor = (priceIncrement) => {
   bgColor = borderColor = priceIncrement < 0
     ? 'rgb(0, 128, 0)'
     : priceIncrement == 0 //eslint-disable-line
-      ? 'rgb(192,192,192)'
-      : 'rgb(255, 99, 132)'
+      ? 'rgb(139,136,136)'
+      : 'rgb(255, 0, 0)'
 }
