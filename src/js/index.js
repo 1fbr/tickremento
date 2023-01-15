@@ -40,7 +40,6 @@ cleanSearch.addEventListener('click', () => {
   cleanSearch.disabled = true
   search.value = ''
   actualPage = 1
-  getProducts(actualPage)
 })
 
 const handleSupermarketChange = (e) => {
