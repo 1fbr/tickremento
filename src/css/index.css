@@ -51,26 +51,22 @@
   min-height: 120px;
 }
 
-.mercadona-card,
-.mercadona-product-info img {
+.mercadona-card {
   border: 2px solid #229e6b;
   background-color: rgba(34, 158, 107, 0.15);
 }
 
-.gadis-card,
-.gadis-product-info img {
+.gadis-card {
   border: 2px solid #f3ca27;
   background-color: rgba(243, 202, 39, 0.15);
 }
 
-.familia-card,
-.familia-product-info img {
+.familia-card {
   border: 2px solid #b92c32;
   background-color: rgba(185, 44, 50, 0.15);
 }
 
-.froiz-card,
-.froiz-product-info img {
+.froiz-card {
   border: 2px solid #b52f1a;
   background-color: rgba(181, 47, 26, 0.15);
 }
@@ -135,14 +131,13 @@ a {
 .gadis-product-info img,
 .familia-product-info img,
 .froiz-product-info img {
+  object-fit: contain;
   max-width: 95px;
   max-height: 95px;
   width: auto;
   height: auto;
   border-radius: 0.5rem;
-  padding: 0.25rem;
   margin-right: 0.75rem;
-  background-color: white;
 }
 
 span#product-name {
