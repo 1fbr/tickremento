@@ -48,6 +48,7 @@
 .froiz-product-info {
   border-radius: 0.5rem;
   padding: 0.25rem;
+  min-height: 120px;
 }
 
 .mercadona-card,
@@ -134,10 +135,13 @@ a {
 .gadis-product-info img,
 .familia-product-info img,
 .froiz-product-info img {
-  width: 85px;
-  height: 85px;
+  max-width: 95px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
   border-radius: 0.5rem;
   padding: 0.25rem;
+  margin-right: 0.75rem;
   background-color: white;
 }
 
