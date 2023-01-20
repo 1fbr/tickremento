@@ -19,7 +19,7 @@
 .gadis-card,
 .familia-card,
 .froiz-card {
-  width: 400px;
+  width: 420px;
   text-align: center;
   margin: 15px;
   padding: 10px;
@@ -108,6 +108,7 @@
   display: flex;
   flex-direction: column;
   width: 70%;
+  padding: 0.5rem;
   align-items: baseline;
   text-align: initial;
 }

@@ -27,6 +27,16 @@
   .checkboxes-wrapper {
     padding: 1rem;
   }
+
+  .gadis-card,
+  .mercadona-card,
+  .familia-card {
+    width: 360px;
+  }
+
+  .inner-info {
+    padding: 1rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 810px) {
@@ -83,12 +93,6 @@
 
   nav a {
     padding: 0 1.5rem;
-  }
-
-  .gadis-card,
-  .mercadona-card,
-  .familia-card {
-    width: 360px;
   }
 
   #footer-content p {
