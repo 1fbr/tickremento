@@ -9,11 +9,11 @@
     font-size: 1.7rem;
   }
 
-  article {
+  #about-container article {
     padding: 1rem 0;
   }
 
-  article p {
+  #about-container article p {
     line-height: 1.5rem;
     padding: 0.35rem;
   }
