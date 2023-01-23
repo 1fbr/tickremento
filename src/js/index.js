@@ -1,6 +1,6 @@
-import { getProducts, getSearchResults, getSupermarketProducts } from './components/getProducts.js'
-import { maxPages, supermarketPages } from './utils/pageNumber.js'
-import { removeChilds, debounce, isModalDisplayed } from './utils/eventUtils.js'
+import { getProducts, getSearchResults, getSupermarketProducts } from './services/products.js'
+import { maxPages, supermarketPages } from './utils/supermarket-pages.js'
+import { removeChilds, debounce, isModalDisplayed } from './utils/event-utils.js'
 
 const mainContainer = document.querySelector('.main-container')
 const search = document.querySelector('.product-filter')

@@ -1,4 +1,4 @@
-import { bgColor, borderColor } from './priceHandler.js'
+import { bgColor, borderColor } from '../handlers/price-color-handler.js'
 export const chartConfig = (monthsArray, pricesArray, priceChart) => {
   const dataChart = {
     labels: monthsArray,

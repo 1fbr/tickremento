@@ -1,7 +1,7 @@
-import { renderProducts, renderSearchResults, renderSupermarketProducts } from './createProducts.js'
-import { renderErrors } from './errorHandler.js'
+import { renderProducts, renderSearchResults, renderSupermarketProducts } from '../components/render-products.js'
+import { renderErrors } from '../handlers/error-handler.js'
 
-const API_URL = 'https://tickremento-api.up.railway.app/api'
+const API_URL = 'http://localhost:3001/api/'
 
 const handleResponse = (response) => {
   return (response.ok) ? response.json() : Promise.reject(response)

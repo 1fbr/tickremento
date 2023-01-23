@@ -1,4 +1,4 @@
-import { createCard } from './createCard.js'
+import { createCard } from './product-card.js'
 
 const renderCards = (data, className) => {
   const container = document.createElement('section')

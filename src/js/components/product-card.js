@@ -1,5 +1,5 @@
-import { getPrices } from '../utils/priceHandler.js'
-import { chartConfig } from '../utils/createChart.js'
+import { getPrices } from '../handlers/price-color-handler.js'
+import { chartConfig } from '../utils/chart.js'
 
 const main = document.querySelector('.main-container')
 const fragment = document.createDocumentFragment()

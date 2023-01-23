@@ -1,4 +1,4 @@
-import { createModal } from './modal.js'
+import { createModal } from '../components/modal.js'
 
 export const renderErrors = (error) => {
   let header, message
