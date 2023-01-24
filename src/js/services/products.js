@@ -1,7 +1,7 @@
 import { renderProducts, renderSearchResults, renderSupermarketProducts } from '../components/render-products.js'
 import { renderErrors } from '../handlers/error-handler.js'
 
-const API_URL = 'http://localhost:3001/api/'
+const API_URL = 'http://localhost:3001/api'
 
 const handleResponse = (response) => {
   return (response.ok) ? response.json() : Promise.reject(response)
