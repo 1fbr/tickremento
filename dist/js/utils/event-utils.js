@@ -1,0 +1,1 @@
+let spinner=document.querySelector(".spinner");export const removeChilds=e=>{for(;e.lastChild;)e.removeChild(e.lastChild)};export const debounce=(e,o)=>{let l;return(...r)=>{l&&clearTimeout(l),l=setTimeout(()=>{e(...r)},o)}};export const isModalDisplayed=()=>!!document.querySelector(".modal-window")&&(spinner.style.display="none",!0);

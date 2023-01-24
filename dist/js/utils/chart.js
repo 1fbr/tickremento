@@ -1,0 +1,1 @@
+import{bgColor as e,borderColor as s}from"../handlers/price-color-handler.js";export const chartConfig=(t,a,o)=>{let l={labels:t,datasets:[{backgroundColor:e,borderColor:s,data:a}]},n={type:"line",data:l,options:{plugins:{legend:{display:!1},y:{suggestedMin:0,suggestedMax:7.5,ticks:{stepSize:1.5}}}}};new Chart(o,n)};

@@ -1,0 +1,1 @@
+import{createCard as r}from"./product-card.js";let renderCards=(e,t)=>{let d=document.createElement("section");d.classList.add(t),e.forEach(e=>{r(e,d)})};export const renderProducts=r=>{renderCards(r,"products-container")};export const renderSearchResults=r=>{renderCards(r,"products-container")};export const renderSupermarketProducts=r=>{renderCards(r,"products-container")};
