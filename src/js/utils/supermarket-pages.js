@@ -1,8 +1,8 @@
-const TOTAL_PRODUCTS = 866
+const TOTAL_PRODUCTS = 864
 const GADIS_PRODUCTS = 352
-const MERCADONA_PRODUCTS = 297
+const MERCADONA_PRODUCTS = 296
 const FAMILIA_PRODUCTS = 96
-const FROIZ_PRODUCTS = 121
+const FROIZ_PRODUCTS = 120
 
 export const limit = 60
 export const maxPages = Math.ceil(TOTAL_PRODUCTS / limit)
