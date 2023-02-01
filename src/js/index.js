@@ -1,4 +1,4 @@
-import { getProducts, getSearchResults, getSupermarketProducts } from './services/products.js'
+import { getProducts, getSearchResults, getSearchResultsBySupermarket, getSupermarketProducts } from './services/products.js'
 import { maxPages, supermarketPages } from './utils/supermarket-pages.js'
 import { removeChilds, debounce, isModalDisplayed } from './utils/event-utils.js'
 
@@ -24,7 +24,11 @@ search.addEventListener('input', debounce((e) => {
   if (e.target.value.length >= 2) {
     cleanSearch.disabled = false
     spinner.style.display = 'none'
-    getSearchResults(searchTerm)
+    if (supermarketName !== '') {
+      getSearchResultsBySupermarket(supermarketName, searchTerm)
+    } else {
+      getSearchResults(searchTerm)
+    }
   }
 
   if (e.target.value.length === 0) {
