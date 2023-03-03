@@ -34,16 +34,26 @@ search.addEventListener('input', debounce((e) => {
   if (e.target.value.length === 0) {
     cleanSearch.disabled = true
     actualPage = 1
-    getProducts(actualPage)
+    if (supermarketName) {
+      getSupermarketProducts(supermarketName, actualPage)
+    } else {
+      getProducts(actualPage)
+    }
   }
 }, 250))
 
-cleanSearch.addEventListener('click', () => {
+cleanSearch.addEventListener('click', (e) => {
+  e.preventDefault()
   spinner.style.display = 'block'
   removeChilds(mainContainer)
   cleanSearch.disabled = true
   search.value = ''
   actualPage = 1
+  if (supermarketName) {
+    getSupermarketProducts(supermarketName, actualPage)
+  } else {
+    getProducts(actualPage)
+  }
 })
 
 const handleSupermarketChange = (e) => {
