@@ -6,6 +6,7 @@
 }
 
 body {
+  min-height: 100vh;
   background: linear-gradient(
     rgb(248, 192, 153),
     rgb(216, 183, 160),
@@ -14,10 +15,6 @@ body {
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(rgb(0, 0, 0), rgb(41, 38, 35), rgb(48, 45, 43));
   color: #fff;
 }
@@ -38,9 +35,6 @@ nav {
   background-color: rgb(48, 45, 43);
   color: #fff;
   font-size: 1.2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 nav a {
@@ -74,17 +68,10 @@ nav a:active {
 main {
   flex-grow: 1;
   width: 100%;
-  min-height: 1000px;
 }
 
 a {
   font-weight: bold;
-}
-
-header img {
-  width: 130px;
-  height: 108px;
-  margin: 0.75rem;
 }
 
 footer {
@@ -93,11 +80,14 @@ footer {
   justify-content: center;
   background: linear-gradient(rgb(0, 0, 0), rgb(41, 38, 35), rgb(48, 45, 43));
   color: #fff;
+  position: sticky;
+  top: 100vh;
+  margin-top: 1rem;
 }
 
 #footer-content {
   padding: 1.5rem;
-  width: 50%;
+  width: 85%;
 }
 
 #footer-content p {

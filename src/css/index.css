@@ -71,7 +71,7 @@
   background-color: #f0dddd;
   padding: 1rem 0 0.5rem 0;
   position: sticky;
-  top: 80px;
+  top: 0px;
   width: 100%;
   z-index: 1;
 }
