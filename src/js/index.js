@@ -57,11 +57,8 @@ cleanSearch.addEventListener('click', (e) => {
 })
 
 const handleSupermarketChange = (e) => {
-  spinner.style.display = 'block'
-  if (isModalDisplayed()) return
   e.preventDefault()
   removeChilds(mainContainer)
-  search.value = ''
   actualPage = 1
 
   for (let i = 0; i < supermarkets.length; i++) {
@@ -73,7 +70,11 @@ const handleSupermarketChange = (e) => {
     }
   }
 
-  if (supermarketName) {
+  if (search.value != '') { //eslint-disable-line
+    getSearchResultsBySupermarket(supermarketName, searchTerm)
+  } else if (supermarketName == '' && search.value != '') { //eslint-disable-line
+    getSearchResults(searchTerm)
+  } else if (supermarketName && search.value == '') { //eslint-disable-line
     getSupermarketProducts(supermarketName, actualPage)
   } else {
     getProducts(actualPage)
