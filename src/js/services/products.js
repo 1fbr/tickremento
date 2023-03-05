@@ -3,17 +3,13 @@ import { renderErrors } from '../handlers/error-handler.js'
 
 const API_URL = 'http://localhost:3001/products'
 
-const handleResponse = (response) => {
-  return (response.ok) ? response.json() : Promise.reject(response)
-}
-
 const getData = async (endpoint, callback) => {
-  try {
-    const response = await fetch(endpoint)
-    const data = await handleResponse(response)
+  const response = await fetch(endpoint)
+  const data = await response.json()
+  if (!response.ok) {
+    renderErrors(response, data)
+  } else {
     callback(data)
-  } catch (err) {
-    renderErrors(err)
   }
 }
 
