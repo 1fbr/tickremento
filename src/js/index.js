@@ -1,6 +1,6 @@
 import { getProducts, getSearchResults, getSearchResultsBySupermarket, getSupermarketProducts } from './services/products.js'
 import { maxPages, supermarketPages } from './utils/supermarket-pages.js'
-import { removeChilds, debounce, isModalDisplayed } from './utils/event-utils.js'
+import { removeChilds, debounce, disableFilters } from './utils/event-utils.js'
 
 const mainContainer = document.querySelector('.main-container')
 const search = document.querySelector('.product-filter')
@@ -14,6 +14,9 @@ let supermarketName = ''
 
 document.addEventListener('DOMContentLoaded', () => {
   getProducts(actualPage)
+  setTimeout(() => {
+    if (document.querySelector('.modal-window')) disableFilters()
+  }, 2000)
 })
 
 search.addEventListener('input', debounce((e) => {
@@ -106,7 +109,6 @@ const debouncePagination = debounce((scrollEvent) => {
 window.addEventListener('scroll', debouncePagination)
 
 const newPage = () => {
-  if (isModalDisplayed()) return
   actualPage++
   const targetPages = supermarketName !== '' ? supermarketPages[supermarketName] : maxPages
 

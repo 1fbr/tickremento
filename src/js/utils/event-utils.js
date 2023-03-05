@@ -1,4 +1,5 @@
 const spinner = document.querySelector('.spinner')
+const filters = document.querySelector('.filters')
 
 export const removeChilds = (parent) => {
   while (parent.lastChild) {
@@ -18,10 +19,11 @@ export const debounce = (func, delay) => {
   }
 }
 
-export const isModalDisplayed = () => {
-  if (document.querySelector('.modal-window')) {
+export const disableFilters = () => {
+  if (document?.querySelector('.modal-window').firstChild.outerText === 'Ocurrió un error') {
     spinner.style.display = 'none'
-    return true
+    for (let i = 0; i <= 5; i++) {
+      filters[i].disabled = true
+    }
   }
-  return false
 }

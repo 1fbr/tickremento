@@ -12,11 +12,11 @@ export const renderErrors = (error) => {
     header = 'Servicio no disponible'
     message = 'El servidor no se encuentra disponible en estos momentos. Por favor, inténtelo de nuevo más tarde.'
   } else if (error.message === 'NetworkError when attempting to fetch resource.') {
-    header = 'Límite de peticiones alcanzado'
-    message = 'Se ha llegado al límite máximo de peticiones que soporta el servidor en un determinado espacio de tiempo. Por favor, inténtelo de nuevo más tarde.'
+    header = 'Ocurrió un error'
+    message = 'El servidor no se encuentra disponible en estos momentos. Por favor, inténtelo de nuevo más tarde.'
   } else {
     header = 'Ocurrió un error'
-    message = `Error: ${error.toString()}. El servidor no se encuentra disponible en estos momentos. Por favor, inténtelo de nuevo más tarde.`
+    message = 'El servidor no se encuentra disponible en estos momentos. Por favor, inténtelo de nuevo más tarde.'
   }
   createModal(header, message)
 }
