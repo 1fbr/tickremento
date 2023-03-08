@@ -17,6 +17,10 @@
     line-height: 1.5rem;
     padding: 0.35rem;
   }
+
+  .search-window {
+    width: 85vw;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 950px) {
@@ -57,8 +61,8 @@
     width: 100%;
   }
 
-  #footer-content p {
-    font-size: 0.85rem;
+  #footer-content p, #search-output {
+    font-size: 0.9rem;
   }
 
   .search {
@@ -96,7 +100,7 @@
     padding: 0 1.5rem;
   }
 
-  #footer-content p {
+  #footer-content p, #search-output {
     font-size: 0.95rem;
   }
 

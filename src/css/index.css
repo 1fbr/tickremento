@@ -90,6 +90,18 @@
   margin-left: 0.15rem;
 }
 
+.search-window {
+  margin: 1rem auto 0 auto;
+  text-align: center;
+  border-radius: 0.5em;
+  width: fit-content;
+  background-color: #f2d4d4;
+}
+
+#search-output {
+  padding: 1rem;
+}
+
 .price-info {
   padding: 0.5rem;
 }
@@ -127,7 +139,7 @@ a {
 
 span#product-name {
   font-size: 0.9rem;
-  margin-top: 0.25rem;
+  margin: 0.2rem 0;
 }
 
 span#supermarket-name,
@@ -175,6 +187,8 @@ span#increment {
 
 .modal-content {
   color: #0f0f0f;
+  text-align: justify;
+  line-height: 1.5em;
 }
 
 .switch {
