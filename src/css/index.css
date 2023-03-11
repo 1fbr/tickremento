@@ -143,12 +143,12 @@ span#product-name {
 }
 
 span#supermarket-name,
-span#actual-price {
+span#current-price {
   font-size: 1rem;
   font-weight: bold;
 }
 
-span#increment {
+span#increase {
   padding-left: 15px;
   font-size: 0.85rem;
   font-weight: bold;
