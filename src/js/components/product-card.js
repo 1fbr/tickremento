@@ -3,6 +3,7 @@ import { chartConfig } from '../utils/chart.js'
 
 const main = document.querySelector('.main-container')
 const fragment = document.createDocumentFragment()
+const range = document.createRange()
 
 export const createCard = (product, productsContainer) => {
   const { supermarket, url, img, productId, name, details, prices, months } = product
@@ -10,28 +11,19 @@ export const createCard = (product, productsContainer) => {
   const supermarketVariable = `${supermarket.toLowerCase()}`
   const newCard = document.createElement('article')
   newCard.classList.add(`${supermarketVariable}-card`)
-  const productInfo = document.createElement('div')
-  productInfo.classList.add(`${supermarketVariable}-product-info`)
-  const innerInfo = document.createElement('div')
-  innerInfo.classList.add('inner-info')
-
-  const linkToProduct = document.createElement('a')
-  linkToProduct.href = url
-  linkToProduct.target = '_blank'
-  const productImage = document.createElement('img')
-  productImage.src = img
-  productImage.alt = `Imagen del producto ${name}`
-  productImage.loading = 'lazy'
-  productImage.id = productId
-
-  const supermarketName = document.createElement('span')
-  supermarketName.textContent = supermarket
-  supermarketName.id = 'supermarket-name'
-  const productName = document.createElement('span')
-  productName.textContent = name
-  productName.id = 'product-name'
-  const productDetails = document.createElement('small')
-  productDetails.textContent = details
+  const productInfo =
+  `
+    <div class='${supermarketVariable}-product-info'>
+        <a href='${url}' target='_blank'>
+          <img src="${img}" alt="Imagen del producto ${name}" loading="lazy" id="${productId}">
+        </a>
+        <div class='inner-info'>
+          <span id='supermarket-name'>${supermarket}</span>
+          <span id='product-name'>${name}</span>
+          <small>${details}</small>
+        </div>
+    </div>
+  `
 
   const priceInfo = document.createElement('div')
   priceInfo.classList.add('price-info')
@@ -55,15 +47,9 @@ export const createCard = (product, productsContainer) => {
   const pricesArray = prices
   chartConfig(monthsArray, pricesArray, priceChart)
 
-  linkToProduct.appendChild(productImage)
-  productInfo.appendChild(linkToProduct)
-  innerInfo.appendChild(supermarketName)
-  innerInfo.appendChild(productName)
-  innerInfo.appendChild(productDetails)
-  productInfo.appendChild(innerInfo)
   priceInfo.appendChild(currentPrice)
   priceInfo.appendChild(increase)
-  newCard.appendChild(productInfo)
+  newCard.appendChild(range.createContextualFragment(productInfo))
   newCard.appendChild(priceInfo)
   newCard.appendChild(priceChart)
   fragment.appendChild(newCard)
