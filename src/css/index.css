@@ -57,9 +57,36 @@
   background-color: rgba(181, 47, 26, 0.15);
 }
 
+.related-data {
+  height: 50px;
+  background-color: rgb(48, 45, 43);
+  display: grid;
+  place-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.related-data a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+.related-data a:hover {
+  opacity: 0.75;
+}
+
+.related-data a span {
+  margin-left: 0.35rem;
+}
+
 .filters {
   background-color: #f0dddd;
-  padding: 1rem 0 0.5rem 0;
+ /*  padding: 1rem 0 0.5rem 0; */
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
   position: sticky;
   top: 0px;
   width: 100%;

@@ -65,6 +65,10 @@ nav a:active {
   font-weight: bold;
 }
 
+nav a span {
+  margin-left: 0.25em;
+}
+
 main {
   flex-grow: 1;
   width: 100%;
