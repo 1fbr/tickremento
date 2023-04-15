@@ -18,7 +18,7 @@
       content="https://tickremento.netlify.app/img/character.webp"
     />
     <meta property="og:locale:alternate" content="es_ES" />
-    <link rel="canonical" href="https://tickremento.netlify.app/faq"/>
+    <link rel="canonical" href="https://tickremento.netlify.app/faq" />
     <link rel="icon" rel="shortcut icon" href="./img/favicon.webp" />
     <title>Tickremento | FAQ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -73,7 +73,7 @@
           </svg>
           <span>Acerca</span>
         </a>
-        <a href="./faq.html" id="faq">
+        <a href="./faq.html" id="faq" class="active-route">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-user"
@@ -116,14 +116,14 @@
       </nav>
     </header>
     <main>
+      <div class="faq-title">
+        <img
+          src="./img/character.webp"
+          alt="Imagen de un personaje mirando sorprendido un costoso ticket de compra"
+        />
+        <h1>FAQ.</h1>
+      </div>
       <section class="accordion-container">
-        <div class="faq-title">
-          <img
-            src="./img/character.webp"
-            alt="Imagen de un personaje mirando sorprendido un costoso ticket de compra"
-          />
-          <h1 id="faq-heading">FAQ.</h1>
-        </div>
         <div class="accordion">
           <article>
             <input
@@ -165,10 +165,10 @@
             >
             <div class="accordion-content">
               <p>
-                Son datos de dominio público. Para los datos antiguos he tirado
-                de tickets de compra, de información en internet, una vez tienes
-                eso ya es ir comparando en las web de cada supermercado con tu
-                código postal. Ese proceso se podría automatizar, pero no es el
+                Son datos de dominio público. Para los datos antiguos he
+                utilizado tickets de compra, información de fuentes abiertas en
+                internet, una vez tienes base te puedes apoyar en la web de cada
+                supermercad. Ese proceso se podría automatizar, pero no es el
                 caso actualmente.
               </p>
             </div>
@@ -195,15 +195,16 @@
               class="accordion-input"
             />
             <label for="question5" class="accordion-label"
-              >Yo creo que compré x producto en x mes a un precio más
+              >Yo creo que compré un producto en a un precio más
               alto/bajo.</label
             >
             <div class="accordion-content">
               <p>
-                Es posible, ya que en el mismo mes un producto ha podido tener
-                varios precios, en esta web solo se registra el último de ellos,
-                es decir, como cierra el mes. Por otro lado, quizás en tu lugar
-                de residencia ese producto tenga otro coste.
+                Es posible, ya que en el mismo mes un producto ha podido sufrir
+                una variación en el precio, en esta web trato de registrar los
+                precios a final de mes. Por otro lado, quizás en tu lugar de
+                residencia ese producto tenga otro coste, aunque es algo que no
+                he apreciado, al menos en la venta vía web.
               </p>
             </div>
           </article>
@@ -233,13 +234,14 @@
               class="accordion-input"
             />
             <label for="question7" class="accordion-label"
-              >El enlace de una imagen me lleva a una página 404.</label
+              >El enlace de una imagen me lleva a una página que no
+              existe.</label
             >
             <div class="accordion-content">
               <p>
-                Los supermercados retiran productos de sus webs de vez en
-                cuando. También puede ser que el enlace esté mal, si observas
-                eso, no dudes en avisarme.
+                Los supermercados retiran productos de sus webs de vez en cuando
+                o productos que solo son de temporada. También puede ser que el
+                enlace esté mal, si observas eso, no dudes en avisarme.
               </p>
             </div>
           </article>
