@@ -69,6 +69,10 @@ nav a span {
   margin-left: 0.25em;
 }
 
+.active-route {
+  text-decoration: underline;
+}
+
 main {
   flex-grow: 1;
   width: 100%;
