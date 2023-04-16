@@ -91,6 +91,7 @@ h1 {
   height: 2px;
   background: currentColor;
 }
+
 .accordion button .icon::after {
   display: block;
   position: absolute;
@@ -105,23 +106,31 @@ h1 {
 .accordion button[aria-expanded="true"] {
   color: #03b5d2;
 }
+
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
+
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height: fit-content;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
+
+.accordion-title {
+  font-weight: bold;
+}
+
 .accordion-content {
   opacity: 0;
   max-height: 0;
-  color: white;
+  color: #03b5d2;
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
 }
+
 .accordion-content p {
   font-size: 0.85rem;
   font-weight: 300;
