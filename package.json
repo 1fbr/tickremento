@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "cssnano": "5.1.14",
-    "postcss": "8.4.21",
+    "postcss": "8.4.31",
     "standard": "17.0.0"
   },
   "eslintConfig": {
