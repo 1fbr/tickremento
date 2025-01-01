@@ -7,9 +7,9 @@
     "minify:css": "node src/css/css-minifier.js"
   },
   "devDependencies": {
-    "cssnano": "5.1.14",
-    "postcss": "8.4.21",
-    "standard": "17.0.0"
+    "cssnano": "7.0.6",
+    "postcss": "8.4.49",
+    "standard": "17.1.2"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json",
