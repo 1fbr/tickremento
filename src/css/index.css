@@ -59,8 +59,7 @@
 
 .related-data {
   height: 50px;
-  border-top: 1px solid gray;
-  background-color: rgb(48, 45, 43);
+  background-color: #F79D65;
   display: grid;
   place-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
